@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm Yarn-Inspired Color Palette */
+  --cream: #FAF7F2;
+  --cream-dark: #F5F0E8;
+  --sand: #EDE6D8;
+  --beige: #E8DDD0;
+  --taupe: #C4B5A5;
+  --warm-gray: #A89888;
+  --brown: #6B5D4D;
+  --brown-dark: #4A4035;
+  --gold: #C4A77D;
+  --gold-dark: #B5986E;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-[var(--cream)] text-[var(--brown-dark)];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-[var(--gold)] text-[var(--brown-dark)] font-bold rounded-full 
+           hover:bg-[var(--gold-dark)] transition-colors shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-[var(--brown-dark)] text-[var(--brown-dark)] font-bold rounded-full 
+           hover:bg-[var(--brown-dark)] hover:text-[var(--cream)] transition-colors;
+  }
+  
+  .card {
+    @apply bg-[var(--cream-dark)] rounded-2xl p-6 border border-[var(--beige)] 
+           hover:shadow-lg transition-all duration-300;
+  }
+}
